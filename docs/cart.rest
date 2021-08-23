@@ -1,0 +1,35 @@
+@baseURL = http://localhost:6400/
+
+### Carts
+GET {{baseURL}}carts
+
+
+### Get a single cart
+GET {{baseURL}}carts/5
+
+
+### carts with limit
+GET {{baseURL}}carts?limit=5
+
+### carts with Sort results
+GET {{baseURL}}carts?sort=desc
+
+### Get carts in a date range
+GET {{baseURL}}carts/startdate=2019-12-10&enddate=2020-10-10
+
+
+
+### Get user carts
+GET {{baseURL}}carts/user/2
+
+### Add to cart
+POST {{baseURL}}carts
+
+{
+    "userId":5,
+    "date":2020-02-03,
+    "products":[{"productId":5,"quantity":1},{"productId":1,"quantity":5}]
+}
+
+
+

@@ -1,0 +1,34 @@
+@baseURL = http://localhost:6400/
+
+### Products
+GET {{baseURL}}products
+
+### Products with limit
+GET {{baseURL}}products?limit=5
+
+
+
+### Product Details
+GET {{baseURL}}products/1
+
+### categories
+GET {{baseURL}}products/categories
+
+### sub categories
+GET {{baseURL}}products/category/jewelery
+
+### Create Product
+POST {{baseURL}}products
+Content-Type: application/json
+
+{
+    "title": "hidayt product",
+    "price": 13.5,
+    "description": "lorem ipsum set",
+    "image": "https://i.pravatar.cc",
+    "category": "electronic"
+}
+
+
+
+
